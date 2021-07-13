@@ -15,3 +15,9 @@ Choose SHA1_ID
 ```
 $ git cherry-pick <SHA1_ID>
 ```
+
+Delete remote branch
+
+```
+$ git push origin --delete <branch_name>
+```
