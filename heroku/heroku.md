@@ -1,10 +1,17 @@
-# Scheduled backups
+# Capture & download a backup
+
+```
+$ heroku pg:backups:capture
+$ heroku pg:backups:download
+```
+
+# Show scheduled backups
 
 ```
 heroku pg:backups:schedules
 ```
 
-# Create scheduled backup
+# Create a backup schedule
 
 ```
 heroku pg:backups:schedule DATABASE_URL --at '02:00 Europe/Rome'
