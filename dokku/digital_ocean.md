@@ -68,10 +68,47 @@ See all available services in the procfile.
 $ dokku ps:scale <app_name> web=1
 ```
 
+## Add letsencrypt
+
+```
+$ sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
+```
+
+```
+$ dokku letsencrypt:enable <app_name>
+```
+
+```
+$ dokku letsencrypt:auto-renew <app_name>
+```
+
+```
+$ dokku letsencrypt:cron-job --add <app_name>
+```
+
+## Backups
+
+```
+$ dokku postgres:backup-auth <app_pg_service_name> <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY>
+```
+
+```
+# Test a backup creation
+
+$ dokku postgres:backup <app_pg_service_name> <bucket_name>
+```
+
+```
+$ dokku postgres:backup-schedule <app_pg_service_name> <schedule> <bucket_name>
+```
+
+'schedule' is a crontab expression, eg. "0 3 * * *" for each day at 3am.
+
 ## Enable ports
 
 ```
-sudo ufw allow 80
+$ sudo ufw allow 80
+$ sudo ufw allow 443
 ```
 
 - https://pawelurbanek.com/rails-heroku-dokku-migration
