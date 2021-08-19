@@ -12,6 +12,20 @@ pg_dump \
   -d <database_name>
 ```
 
+or
+
+```
+pg_dump \
+  --verbose \
+  --clean \
+  --no-acl \
+  --no-owner \
+  -h localhost \
+  -U postgres \
+  --format=c \
+  <database_name> > latest.dump
+```
+
 # Restore a SQL dump
 
 ```
