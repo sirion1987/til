@@ -1,7 +1,9 @@
 ```
   require 'sidekiq/api'
 
-  Sidekiq::Queue.all.each {|x| x.clear}
+  Sidekiq::Queue.all.each(&:clear)
+  Sidekiq::RetrySet.new.clear
+  Sidekiq::ScheduledSet.new.clear
+  Sidekiq::DeadSet.new.clear
 
-  Sidekiq::Stats.new
 ```
