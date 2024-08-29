@@ -20,3 +20,8 @@
 * Google Analytics -> Matomo
 * Microsoft Office 365 -> LibreOffice
 * Asana -> OpenProject
+
+# Headless E-commerce
+
+* MedusaJS
+* [Vendure](https://vendure.io/)
