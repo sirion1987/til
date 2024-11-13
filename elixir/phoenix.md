@@ -1,3 +1,11 @@
+# Install Phoenix
+
+```bash
+$ mix local.rebar --force
+$ mix local.hex --force
+$ mix archive.install hex phx_new --force
+```
+
 # New project
 
 ```bash
